@@ -1,0 +1,22 @@
+simpul kelas:
+    def __init__(diri, kunci):
+        self.key = kunci
+        self.left = Tidak ada
+        self.right = Tidak ada
+
+def is_balanced(root):
+    jika root adalah Tidak Ada:
+        kembali Benar
+
+    lh = tinggi(root.kiri)
+    rh = tinggi(root.kanan)
+
+    jika abs(lh - rh) <= 1 dan is_balanced(root.left) dan is_balanced(root.right):
+        kembali Benar
+
+    kembali Salah
+
+def tinggi (simpul):
+    jika simpulnya Tidak Ada:
+        kembali 0
+    kembalikan 1 + maks(tinggi(simpul.kiri), tinggi(simpul.kanan))
